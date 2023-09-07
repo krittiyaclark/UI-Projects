@@ -1,0 +1,74 @@
+/* Creating and Using Variables */
+
+$fonts: "Poppins", Helvertica, sans-serif;
+$primary-color: #ab99ca;
+$light-gray: #ccc;
+$very-light-gray: #fefefe;
+$spacing: 2rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $fonts;
+  box-sizing: border-box;
+}
+body {
+  font-family: $fonts;
+  background-color: $primary-color;
+  padding: $spacing;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// main {
+// display: block;
+// }
+header {
+  text-align: center;
+}
+.center {
+  margin: 0 auto;
+}
+.gallery-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10% auto;
+  #backBtb,
+  #nextBtb {
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+  }
+  .gallery {
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .gallery-container {
+      width: 900px;
+      display: flex;
+      grid-template-columns: auto;
+      grid-gap: 20px;
+      padding: 10px;
+      flex: none;
+      span img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        filter: grayscale(100%);
+        cursor: pointe;
+        transition: transform 0.5s;
+        &:hover {
+          filter: grayscale(0);
+          cursor: pointe;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
