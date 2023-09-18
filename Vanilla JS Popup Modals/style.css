@@ -61,6 +61,10 @@ header {
           flex: 0 1 calc(33.33% - 30px);
 }
 
+.container .card.popup-trigger {
+  cursor: pointer;
+}
+
 .container .card .image-container {
   overflow: hidden;
   height: 203px;
@@ -96,5 +100,52 @@ header {
   display: inline-block;
   -webkit-transition: 0.1s ease-in;
   transition: 0.1s ease-in;
+}
+
+/****** Modals ******/
+.body-blackout {
+  position: absolute;
+  z-index: 1010;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: none;
+}
+
+.body-blackout.is-blacked-out {
+  display: block;
+}
+
+.popup-modal {
+  height: 365px;
+  width: 650px;
+  position: absolute;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 30px 15px rgba(39, 44, 61, 0.06);
+          box-shadow: 0 0 30px 15px rgba(39, 44, 61, 0.06);
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  z-index: 1011;
+}
+
+.popup-modal.is--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-modal__close {
+  position: absolute;
+  font-size: 1.2rem;
+  right: -10px;
+  top: -10px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
