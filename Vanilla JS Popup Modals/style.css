@@ -1,0 +1,100 @@
+/* Creating and Using Variables */
+body {
+  font-family: "Poppins", Helvertica, sans-serif;
+  background-color: #ffffff;
+  padding: 2rem;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main {
+  display: block;
+}
+
+header {
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  float: none;
+  gap: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.container .card {
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 30px 15px rgba(39, 44, 61, 0.06);
+          box-shadow: 0 0 30px 15px rgba(39, 44, 61, 0.06);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(33.33% - 30px);
+          flex: 0 1 calc(33.33% - 30px);
+}
+
+.container .card .image-container {
+  overflow: hidden;
+  height: 203px;
+}
+
+.container .card .image-container img.image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2px;
+  height: unset;
+  width: 100%;
+}
+
+.container .card .content {
+  height: calc(100% - 203px);
+  padding: 40px;
+}
+
+.container .card .content button.read-more {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.container .card .content button.read-more:hover {
+  color: #2f4756;
+}
+
+.container .card .content button.read-more:hover span.arrow {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  display: inline-block;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+}
+/*# sourceMappingURL=style.css.map */

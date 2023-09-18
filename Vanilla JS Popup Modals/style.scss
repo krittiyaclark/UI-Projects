@@ -1,0 +1,73 @@
+/* Creating and Using Variables */
+
+$fonts: "Poppins", Helvertica, sans-serif;
+$primary-color: #ffffff;
+$light-gray: #ccc;
+$very-light-gray: #fefefe;
+$spacing: 2rem;
+
+body {
+  font-family: $fonts;
+  background-color: $primary-color;
+  padding: $spacing;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: block;
+}
+header {
+  text-align: center;
+}
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  float: none;
+  gap: 30px;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  .card {
+    border-radius: 2px;
+    box-shadow: 0 0 30px 15px rgba(39, 44, 61, 0.06);
+    flex: 0 1 calc(33.33% - 30px);
+    .image-container {
+      overflow: hidden;
+      height: 203px;
+      img.image {
+        object-fit: cover;
+        border-radius: 2px;
+        height: unset;
+        width: 100%;
+      }
+    }
+    .content {
+      height: calc(100% - 203px);
+      padding: 40px;
+      button.read-more {
+        border: none;
+        background: none;
+        padding: 0;
+        cursor: pointer;
+        &:hover {
+          color: #2f4756;
+          span.arrow {
+            transform: translateX(50%);
+            display: inline-block;
+            transition: 0.1s ease-in;
+          }
+        }
+      }
+    }
+  }
+}
