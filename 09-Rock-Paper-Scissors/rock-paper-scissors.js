@@ -65,13 +65,10 @@ function playGame(playerMove) {
 
   document.querySelector(".js-result").innerHTML = result;
 
-  document.querySelector(
-    ".js-move"
-  ).innerHTML = `You ${playerMove} - ${computerMove} Computer`;
-
-  alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
-Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}
-    `);
+  document.querySelector(".js-move").innerHTML = `You
+        <img src="images/${playerMove}-emoji.png" class="move-icon">
+        <img src="images/${computerMove}-emoji.png" class="move-icon">
+        Computer`;
 }
 
 function updateScoreElement() {
