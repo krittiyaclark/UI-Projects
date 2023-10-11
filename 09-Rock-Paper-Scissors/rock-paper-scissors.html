@@ -17,12 +17,18 @@
 
     <button onclick="playGame('scissors')">Scissors</button>
 
+    <p class="js-result"></p>
+    <p class="js-move"></p>
+    <p class="js-score"></p>
+
+
     <button onclick="
         score.wins = 0;
         score.losses = 0;
         score.ties = 0
         // Remove the score from localStorage
         localStorage.removeItem('score')
+        updateScoreElement();
     ">Reset Score</button>
     <script src="rock-paper-scissors.js"></script>
 </body>
