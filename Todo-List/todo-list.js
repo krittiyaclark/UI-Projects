@@ -13,7 +13,7 @@ const todoList = [
 renderTodoList();
 // To update the todo list in HTML. We need to run all the code again by create a function
 function renderTodoList() {
-  // Accumalator pattern: combine <p>${todo}></p> together
+  // Accumulator pattern: combine <p>${todo}></p> together
   let todoListHTML = "";
   for (let i = 0; i < todoList.length; i++) {
     const todoObject = todoList[i];
