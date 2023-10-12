@@ -1,4 +1,17 @@
-const todoList = [];
+const todoList = ["make dinner", "make dishes"];
+
+renderTodoList();
+// To update the todo list in HTML. We need to run all the code again by create a function
+function renderTodoList() {
+  // Accumalator pattern: combine <p>${todo}></p> together
+  let todoListHTML = "";
+  for (let i = 0; i < todoList.length; i++) {
+    const todo = todoList[i];
+    const html = `<p>${todo}</p>`;
+    todoListHTML += html;
+  }
+  document.querySelector(".js-todo-list").innerHTML = todoListHTML;
+}
 
 function addTodo() {
   const inputElemnt = document.querySelector(".js-name-input");
@@ -8,4 +21,5 @@ function addTodo() {
   console.log(todoList);
 
   inputElemnt.value = "";
+  renderTodoList();
 }
