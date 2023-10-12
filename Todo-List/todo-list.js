@@ -1,4 +1,14 @@
-const todoList = ["make dinner", "make dishes"];
+// Group the todoList input and the date input with an object
+const todoList = [
+  {
+    name: "make dinner",
+    dueDate: "2023,12,09",
+  },
+  {
+    name: "wash dishes",
+    dueDate: "2023,12,09",
+  },
+];
 
 renderTodoList();
 // To update the todo list in HTML. We need to run all the code again by create a function
@@ -6,10 +16,12 @@ function renderTodoList() {
   // Accumalator pattern: combine <p>${todo}></p> together
   let todoListHTML = "";
   for (let i = 0; i < todoList.length; i++) {
-    const todo = todoList[i];
+    const todoObject = todoList[i];
+    const { name, dueDate } = todoObject;
+
     const html = `
                 <p>
-                    ${todo} 
+                    ${name}  ${dueDate}
                     <button onclick="
                         todoList.splice(${i}, 1);
                         renderTodoList();
@@ -25,7 +37,13 @@ function addTodo() {
   const inputElemnt = document.querySelector(".js-name-input");
   const name = inputElemnt.value;
 
-  todoList.push(name);
+  const dateInpuElement = document.querySelector(".js-due-date-input");
+  const dueDate = dateInpuElement.value;
+
+  todoList.push({
+    name,
+    dueDate,
+  });
   console.log(todoList);
 
   inputElemnt.value = "";
