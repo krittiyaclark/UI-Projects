@@ -19,10 +19,13 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <p>Todo List</p>
-    <input placeholder="Todo name" class="js-name-input">
-    <input type="date" class="js-due-date-input">
-    <button onclick="addTodo()">Add</button>
-    <div class="js-todo-list"></div>
+
+    <div class="todo-input-grid">
+        <input placeholder="Todo name" class="js-name-input name-input">
+        <input type="date" class="js-due-date-input due-date-input">
+        <button onclick="addTodo()" class="add-todo-button">Add</button>
+        <div class="js-todo-list todo-grid"></div>
+    </div>
 
     <script src="todo-list.js" async defer></script>
 </body>
