@@ -44,10 +44,41 @@ products.forEach((product) => {
           Added
         </div>
 
-        <button class="add-to-cart-button button-primary">
+        <button class="add-to-cart-button button-primary js-add-to-cart" data-product-id="${
+          product.id
+        }">
           Add to Cart
         </button>
       </div>
   `;
 });
+
 document.querySelector(".js-products-grid").innerHTML = productsHTML;
+
+document.querySelectorAll(".js-add-to-cart").forEach((button) => {
+  button.addEventListener("click", () => {
+    // If two products that has the name.
+    const productId = button.dataset.productId;
+
+    let matchingItem;
+
+    cart.forEach((item) => {
+      // If we find a matching item. We will save it in matchingItem.
+      if (productId === item.productId) {
+        matchingItem = item;
+      }
+    });
+
+    // If we find a matching item. We will increase the quantity by 1.
+    if (matchingItem) {
+      matchingItem.quantity += 1;
+      // If we can't find a matching item. We will push it in the cart.
+    } else {
+      cart.push({
+        productId: productId,
+        quantity: 1,
+      });
+    }
+    console.log(cart);
+  });
+});
